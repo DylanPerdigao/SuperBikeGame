@@ -1,0 +1,78 @@
+==================================
+MODIFICATION APPORTÉES
+==================================
+
+1.Couleurs
+
+J'ai implémenté une classe RGBColor qui permet d'offrir une palette de couleur plus diversifiée par rapport à ce qui est proposé (converti le RGB en un entier qui correspond a la couleur voulue.
+_____________________________________
+
+2. Contrôles
+
+Pour contrôler le velo j'ai trouvé inutile et compliqué au niveau de la jouabilité d'utiliser les quatre touche directionnelles pour actionner le moteur, couper le moteur, freiner, incliner en avant/arrière.
+Les contrôles sont: 
+- la barre espace pour sauter
+- la flèche de droite pour avancer (si orienté à droite), freiner (si tourné à gauche) et tourner (si la vitesse est nulle et tourné à gauche)
+- la flèche de gauche pour avancer (si orienté à gauche), freiner (si tourné à droite) et tourner (si la vitesse est nulle et tourné à droite)
+
+_____________________________________
+
+3. Terrain
+
+La classe terrain a été modifiée pour être plus modularisable à chaque niveau.
+(Ce qui a impacté les tutoriels qui ont du être modifiés) 
+
+==================================
+EXTENSIONS
+==================================
+
+1. Élements de décor
+
+Des éléments graphiques	sans hitBox: 
+-Balise
+-SwissFlag
+_____________________________________
+
+2. Des acteurs "spéciaux"
+
+Fait a partir d'acteurs simples vus das les tutoriels, il s'agit d'objets composés
+-Bascule
+Ou alors un terrain qui n'a pas de hitBox
+-specialTerrain
+_____________________________________
+
+3. Triggers
+
+Elements qui peuvent faire une action en détectant une collision:
+- Coin
+	-> Augmente l'argent collecté au fil des parties (système de score)
+- Finish
+	-> Ligne d'arrivée qui permet de détecter la victoire!
+- GravityInversor (Puits de gravité?)
+	-> Inverse la gravité pendant quelques secondes après le contact avec un object (le cycliste, une caisse ou autre)
+_____________________________________
+
+4. Sélecteur de niveaux "sophistiqué"
+
+- Il existe 4 niveaux
+- Au début un seul niveau est débloqué, il faut réussir le niveau pour débloquer le suivant
+- une flèche sert a pointer la boite représentant le niveau que l'on veut choisir (dirigeable avec les flèches du clavier et ENTER pour valider le choix)
+-Affichage du nom du niveau
+-Animation de la camera qui revient sur le menu en cas de reset ou victoire
+
+_____________________________________
+
+5. Terrains customisables
+
+- Choix de mettre la couleur voulue depuis la classe du niveau
+- Modification du coefficient de frottement pour en faire des terrains glissant (ex. Snow Level)
+
+_____________________________________
+
+6. Animation du cycliste
+
+-Leve les bras en cas de victoire
+-Pedale son velo
+_____________________________________
+
+(7. Particules: non-abouti)==================================NIVEAUX==================================1. GRASS LEVEL - Niveau basique avec quelques structures a franchir2. SNOW LEVEL- Niveau sur une piste de ski que l'on doit descendre à velo :) sans tomber sur la tête ;)- Le terrain est plus glissant3. MOON LEVEL- Niveau sur la lune avec quelques obstacles a éviter- Attention à la faible gravité4.Dimensional Level- Niveau (étrange x) certes mais avec une dificulté, ne pas savoir quel chemin prendre et mal doser les vitesse)Conseil: Les sauts peuvent vous sauver la vie ;)==================================CREDITS IMAGES==================================- Modification des images données (GravityInversor)- Invention propre (Balise, SwissFlag)
